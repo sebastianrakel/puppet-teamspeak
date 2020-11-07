@@ -5,14 +5,16 @@ class teamspeak::install {
 
   user { $teamspeak::user:
     managehome => true,
-    home       => $teamspeak::install_location,
+    home       => $teamspeak::home,
     groups     => $teamspeak::group,
     require    => Group[$teamspeak::group],
   }
 
+  $downloaddir = "${teamspeak::home}/downloads"
+
   $teamspeak_dirs = [
-    $teamspeak::install_location,
-    "${teamspeak::install_location}/downloads"
+    $teamspeak::home,
+    $downloaddir,
   ]
 
   file { $teamspeak_dirs:
@@ -22,14 +24,17 @@ class teamspeak::install {
     require => [User[$teamspeak::user], Group[$teamspeak::group]],
   }
 
-  $teamspeak_run_path = "${teamspeak::install_location}/downloads/teamspeak.run"
-  file { $teamspeak_run_path:
-    source  => $teamspeak::source,
-    require => [File[$teamspeak_dirs]],
-  }
+  $archivename = "teamspeak-${teamspeak::version}.tar.bz2"
+  $teamspeak_source = "https://files.teamspeak-services.com/releases/server/${teamspeak::version}/teamspeak3-server_linux_amd64-${teamspeak::version}.tar.bz2"
+  $teamspeak_download_destination = "${downloaddir}/$archivename"
 
-  exec { 'extract_teamspeak':
-    command => "${teamspeak_run_path} --tar xvaf -C ${teamspeak::install_location}",
-    require => [File[$teamspeak_run_path], File[$teamspeak::install_location]],
+  archive { $archivename:
+    source       => $teamspeak_source,
+    path         => $teamspeak_download_destination,
+    extract      => true,
+    extract_path => $teamspeak::home,
+    user         => $teamspeak::user,
+    group        => $teamspeak::group,
+    require      => [File[$teamspeak_dirs]],
   }
 }

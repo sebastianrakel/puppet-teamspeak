@@ -1,5 +1,5 @@
 ---
-teamspeak::source: https://dl.4players.de/ts/releases/3.5.3/TeamSpeak3-Client-linux_amd64-3.5.3.tar.bz2
-teamspeak::install_location: /opt/teamspeak3
+teamspeak::version: '3.12.1'
+teamspeak::home: /opt/teamspeak3
 teamspeak::user: teamspeak
 teamspeak::group: teamspeak
