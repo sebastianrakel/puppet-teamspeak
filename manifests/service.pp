@@ -1,4 +1,4 @@
-class teamspeak::config {
+class teamspeak::service {
   systemd::unit_file { 'teamspeak3.service':
     content => epp("${module_name}/teamspeak3.service.epp", {
       install_location => $teamspeak::home,

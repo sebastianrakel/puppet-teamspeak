@@ -5,5 +5,5 @@ class teamspeak (
   String[1] $version,
 ) {
   contain teamspeak::install
-  contain teamspeak::config
+  contain teamspeak::service
 }
