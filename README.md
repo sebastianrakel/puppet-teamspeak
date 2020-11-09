@@ -1,6 +1,5 @@
 # puppet-teamspeak
 
-[![Build Status](https://travis-ci.com/sebastianrakel/puppet-teamspeak.svg?branch=master)](https://travis-ci.com/sebastianrakel/puppet-teamspeak)
 [![Puppet Forge](https://img.shields.io/puppetforge/v/sebastianrakel/teamspeak.svg)](https://forge.puppetlabs.com/sebastianrakel/teamspeak)
 [![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/sebastianrakel/teamspeak.svg)](https://forge.puppetlabs.com/sebastianrakel/teamspeak)
 [![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/sebastianrakel/teamspeak.svg)](https://forge.puppetlabs.com/sebastianrakel/teamspeak)

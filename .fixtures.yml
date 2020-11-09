@@ -2,5 +2,8 @@
 # See https://github.com/puppetlabs/puppetlabs_spec_helper#using-fixtures for details
 ---
 fixtures:
+  repositories:
+    archive: "https://github.com/voxpupuli/puppet-archive.git"
+    systemd: "https://github.com/camptocamp/puppet-systemd"
   forge_modules:
-#     stdlib: "puppetlabs/stdlib"
+    stdlib: "puppetlabs/stdlib"
