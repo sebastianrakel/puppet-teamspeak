@@ -1,7 +1,7 @@
 # puppet-teamspeak
 
-[![Tests](https://github.com/sebastianrakel/puppet-teamspeak/workflows/tests/badge.svg)](https://github.com/sebastianrakel/puppet-teamspeak/actions?query=branch%3Aamaster+workflow%3Atests)
-[![Quality](https://github.com/sebastianrakel/puppet-teamspeak/workflows/quality/badge.svg)](https://github.com/sebastianrakel/puppet-teamspeak/actions?query=branch%3Aamaster+workflow%3Aquality)
+[![Tests](https://github.com/sebastianrakel/puppet-teamspeak/workflows/tests/badge.svg)]()
+[![Quality](https://github.com/sebastianrakel/puppet-teamspeak/workflows/quality/badge.svg)]()
 [![Puppet Forge](https://img.shields.io/puppetforge/v/sebastianrakel/teamspeak.svg)](https://forge.puppetlabs.com/sebastianrakel/teamspeak)
 [![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/sebastianrakel/teamspeak.svg)](https://forge.puppetlabs.com/sebastianrakel/teamspeak)
 [![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/sebastianrakel/teamspeak.svg)](https://forge.puppetlabs.com/sebastianrakel/teamspeak)
