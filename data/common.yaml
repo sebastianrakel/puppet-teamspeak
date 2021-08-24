@@ -1,5 +1,5 @@
 ---
-teamspeak::version: '3.12.1'
+teamspeak::version: '3.13.5'
 teamspeak::home: /opt/teamspeak3
 teamspeak::user: teamspeak
 teamspeak::group: teamspeak
