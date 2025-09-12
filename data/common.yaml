@@ -1,5 +1,6 @@
 ---
-teamspeak::version: '3.12.1'
+teamspeak::version: '3.13.7'
 teamspeak::home: /opt/teamspeak3
 teamspeak::user: teamspeak
 teamspeak::group: teamspeak
+teamspeak::teamspeak_source_url: "https://files.teamspeak-services.com/releases/server/%{lookup('teamspeak::version')}/teamspeak3-server_linux_amd64-%{lookup('teamspeak::version')}.tar.bz2"
