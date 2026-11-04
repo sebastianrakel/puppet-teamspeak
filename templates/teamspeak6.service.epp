@@ -1,0 +1,19 @@
+<%- | String $install_location,
+      String $user,
+| -%>
+[Unit]
+Description=Teamspeak 6 Server
+Wants=network-online.target
+
+[Service]
+Type=forking
+User=<%= $user %>
+WorkingDirectory=<%= $install_location %>
+Environment=TSSERVER_LICENSE_ACCEPTED=accept
+ExecStart=<%= $install_location -%>/tsserver 
+Restart=always
+RestartSec=15
+
+
+[Install]
+WantedBy=multi-user.target

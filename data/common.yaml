@@ -1,6 +1,7 @@
 ---
-teamspeak::version: '3.13.8'
-teamspeak::home: /opt/teamspeak3
+teamspeak::version: '6.0.0-beta13.1'
+teamspeak::home: /opt/teamspeak
 teamspeak::user: teamspeak
 teamspeak::group: teamspeak
-teamspeak::teamspeak_source_url: "https://files.teamspeak-services.com/releases/server/%{lookup('teamspeak::version')}/teamspeak3-server_linux_amd64-%{lookup('teamspeak::version')}.tar.bz2"
+teamspeak::teamspeak3_source_url: "https://files.teamspeak-services.com/releases/server/%{lookup('teamspeak::version')}/teamspeak3-server_linux_amd64-%{lookup('teamspeak::version')}.tar.bz2"
+teamspeak::teamspeak6_source_url: "https://github.com/teamspeak/teamspeak6-server/releases/download/v%{lookup('teamspeak::version')}/teamspeak6-server-linux-amd64.tar.xz"

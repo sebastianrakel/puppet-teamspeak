@@ -1,17 +1,6 @@
-class teamspeak::install(
-  Stdlib::HTTPUrl $teamspeak_source_url = $teamspeak::teamspeak_source_url,
+class teamspeak::teamspeak3::install(
+  Stdlib::HTTPUrl $source_url = $teamspeak::teamspeak3_source_url,
 ) {
-  group { $teamspeak::group:
-    ensure => present,
-  }
-
-  user { $teamspeak::user:
-    managehome => true,
-    home       => $teamspeak::home,
-    groups     => $teamspeak::group,
-    require    => Group[$teamspeak::group],
-  }
-
   $downloaddir = "${teamspeak::home}/downloads"
 
   $teamspeak_dirs = [
@@ -27,11 +16,10 @@ class teamspeak::install(
   }
 
   $archivename = "teamspeak-${teamspeak::version}.tar.bz2"
-  $teamspeak_source = $teamspeak_source_url
   $teamspeak_download_destination = "${downloaddir}/${archivename}"
 
   archive { $archivename:
-    source       => $teamspeak_source,
+    source       => $source_url,
     path         => $teamspeak_download_destination,
     extract      => true,
     extract_path => $teamspeak::home,
