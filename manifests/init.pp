@@ -34,8 +34,7 @@ class teamspeak (
 
   case $version {
     /^3/: {
-      contain teamspeak::teamspeak3::install
-      contain teamspeak::teamspeak3::service
+      contain teamspeak::teamspeak3
     }
     /^6/: {
       contain teamspeak::teamspeak6
