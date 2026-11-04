@@ -1,4 +1,6 @@
-class teamspeak::install {
+class teamspeak::install(
+  Stdlib::HTTPUrl $teamspeak_source_url = $teamspeak::teamspeak_source_url,
+) {
   group { $teamspeak::group:
     ensure => present,
   }
@@ -25,7 +27,7 @@ class teamspeak::install {
   }
 
   $archivename = "teamspeak-${teamspeak::version}.tar.bz2"
-  $teamspeak_source = "https://files.teamspeak-services.com/releases/server/${teamspeak::version}/teamspeak3-server_linux_amd64-${teamspeak::version}.tar.bz2"
+  $teamspeak_source = $teamspeak_source_url
   $teamspeak_download_destination = "${downloaddir}/${archivename}"
 
   archive { $archivename:
